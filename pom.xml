@@ -20,6 +20,7 @@
         <java.version>17</java.version>
         <spring-boot-admin.version>3.4.7</spring-boot-admin.version>
         <maven.deploy.skip>true</maven.deploy.skip>
+        <docker.image.prefix>teggr</docker.image.prefix>
     </properties>
 
     <dependencies>
@@ -55,7 +56,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <image>
-                        <name>teggr/${project.artifactId}:${project.version}</name>
+                        <name>${docker.image.prefix}/${project.artifactId}:${project.version}</name>
                     </image>
                 </configuration>
             </plugin>

@@ -52,6 +52,12 @@ This project uses the Spring Boot Maven plugin to build Docker images using [Clo
 
 This will create a Docker image named `teggr/deploy4j-spring-boot-admin:0.0.1-SNAPSHOT`.
 
+To customize the Docker image prefix (e.g., for your own registry):
+
+```bash
+./mvnw spring-boot:build-image -Ddocker.image.prefix=myregistry
+```
+
 ### Run the Docker container
 
 ```bash
